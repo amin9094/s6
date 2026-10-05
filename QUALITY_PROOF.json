@@ -1,0 +1,134 @@
+{
+  "version": "8.38.0",
+  "release_channel": "candidate",
+  "created_at": "2026-10-05T10:27:58.634755+00:00",
+  "source_sha256": "4c8f7ce1983112cbaf9e30f6a7aa2b77c374d4606dda3a9b3bfcd0e54f8db65f",
+  "commit_sha": "unavailable",
+  "docker_image_digest": null,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "pip": "pip 25.0.1 from /workspace/scratch/9fdb0a45d6eb/fix837/venv/lib/python3.12/site-packages/pip (python 3.12)",
+  "dependency_lock": {
+    "schema_version": 2,
+    "python_target": "3.12",
+    "complete_transitive_lock": false,
+    "hashes_required": false,
+    "generated_by": "direct-pin-release-candidate",
+    "reason": "Production requires pip-tools hash locks generated and verified in a connected CPython 3.12 Linux environment.",
+    "generation_command": "python scripts/generate_dependency_locks.py",
+    "verification_command": "python scripts/verify_dependency_lock.py --require-hashes",
+    "attestation_command": "python scripts/mark_dependency_lock_complete.py",
+    "candidate_installable": true,
+    "production_attested": false
+  },
+  "automated_tests_discovered": 971,
+  "automated_tests_executed": 971,
+  "tests_passed": 971,
+  "tests_skipped": 0,
+  "tests_failed": 0,
+  "telegram_handlers": 560,
+  "telegram_handlers_source": "real_application_build",
+  "telegram_test_runtime": "real_python_telegram_bot",
+  "line_coverage_percent": 37,
+  "critical_path_coverage_percent": 74,
+  "production_thresholds": {
+    "line_coverage_percent": 40,
+    "critical_path_coverage_percent": 85
+  },
+  "validation": {
+    "compile": true,
+    "pytest": true,
+    "coverage": true,
+    "critical_coverage": true,
+    "dependency_lock": true,
+    "dependency_boundaries": true,
+    "circular_imports": true,
+    "security_scan": true,
+    "offline_smoke": true,
+    "load_smoke": true,
+    "webapp_assets": true,
+    "javascript": true,
+    "application_build": true,
+    "navigation_audit": true,
+    "python_correctness_lint": true,
+    "miniapp_menu_behavior": true,
+    "menu_text_contrast": true
+  },
+  "deferred_validation": {
+    "dependency_hash_lock": {
+      "status": "not_attested",
+      "reason": "complete transitive hash lock requires a connected Python 3.12 Linux environment"
+    },
+    "docker_build_no_cache": {
+      "status": "not_attested",
+      "reason": "Docker engine unavailable in this environment"
+    },
+    "docker_image_digest": {
+      "status": "not_attested",
+      "reason": "image digest is recorded only after an immutable Docker build"
+    },
+    "postgres_integration": {
+      "status": "not_attested",
+      "reason": "TEST_DATABASE_URL unavailable"
+    },
+    "redis_integration": {
+      "status": "not_attested",
+      "reason": "TEST_REDIS_URL unavailable"
+    },
+    "telegram_staging": {
+      "status": "not_attested",
+      "reason": "real bot token/channel/domain unavailable"
+    },
+    "railway_load_and_rollback": {
+      "status": "not_attested",
+      "reason": "requires a deployed Railway staging service"
+    },
+    "overall_coverage_threshold": {
+      "status": "below_threshold",
+      "reason": "37% < 40%"
+    },
+    "critical_coverage_threshold": {
+      "status": "below_threshold",
+      "reason": "74% < 85%"
+    },
+    "production_static_analysis": {
+      "status": "not_attested",
+      "reason": "Correctness Ruff passed; full repository Ruff/Bandit/Mypy production profiles were not attested."
+    },
+    "telegram_24h_soak": {
+      "status": "not_attested",
+      "reason": "Local regression and load smoke only; no live 24-hour Telegram service test."
+    },
+    "miniapp_browser_visual": {
+      "status": "not_attested",
+      "reason": "Chromium download failed; no screenshot or Telegram WebView rendering attestation. Real source JavaScript behavior and declared palette contrast were checked separately."
+    },
+    "private_broker_bridge": {
+      "status": "not_attested",
+      "reason": "External operator-owned bridge and broker specifications require staging validation."
+    }
+  },
+  "artifacts": {
+    "junit": "quality-artifacts/junit.xml",
+    "coverage_xml": "quality-artifacts/coverage.xml",
+    "coverage_json": "quality-artifacts/coverage.json"
+  },
+  "known_findings_resolution": {
+    "previous_count": 12,
+    "high": 7,
+    "medium": 5,
+    "fixed_and_regression_tested": 12,
+    "remaining_from_this_list": 0,
+    "artifact": "quality-artifacts/baseline_834_remaining_findings_FA.md",
+    "not_a_claim_of_exhaustive_bug_elimination": true
+  },
+  "ui_upgrade": {
+    "shared_menu_priority": true,
+    "existing_access_preserved": true,
+    "new_regression_cases": 16,
+    "javascript_menu_scenarios": 8,
+    "declared_palette_contrast_pairs": 6,
+    "browser_visual_attested": false
+  }
+}

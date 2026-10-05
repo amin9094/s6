@@ -1,0 +1,126 @@
+{
+  "version": "8.38.0",
+  "release_channel": "candidate",
+  "created_at": "2026-10-05T10:31:50.320454+00:00",
+  "commit_sha": "unavailable",
+  "docker_image_digest": null,
+  "quality_proof_source_sha256": "4c8f7ce1983112cbaf9e30f6a7aa2b77c374d4606dda3a9b3bfcd0e54f8db65f",
+  "runtime_sha256": "a4fc2fc8861da1087b81f2d2ed11a75e6219c261426e1b239568502e57aeff7b",
+  "automated_tests_discovered": 971,
+  "automated_tests_executed": 971,
+  "telegram_handlers": 560,
+  "line_coverage_percent": 37,
+  "critical_path_coverage_percent": 74,
+  "validation": {
+    "compile": true,
+    "pytest": true,
+    "coverage": true,
+    "critical_coverage": true,
+    "dependency_lock": true,
+    "dependency_boundaries": true,
+    "circular_imports": true,
+    "security_scan": true,
+    "offline_smoke": true,
+    "load_smoke": true,
+    "webapp_assets": true,
+    "javascript": true,
+    "application_build": true,
+    "navigation_audit": true,
+    "python_correctness_lint": true,
+    "miniapp_menu_behavior": true,
+    "menu_text_contrast": true
+  },
+  "deferred_validation": {
+    "dependency_hash_lock": {
+      "status": "not_attested",
+      "reason": "complete transitive hash lock requires a connected Python 3.12 Linux environment"
+    },
+    "docker_build_no_cache": {
+      "status": "not_attested",
+      "reason": "Docker engine unavailable in this environment"
+    },
+    "docker_image_digest": {
+      "status": "not_attested",
+      "reason": "image digest is recorded only after an immutable Docker build"
+    },
+    "postgres_integration": {
+      "status": "not_attested",
+      "reason": "TEST_DATABASE_URL unavailable"
+    },
+    "redis_integration": {
+      "status": "not_attested",
+      "reason": "TEST_REDIS_URL unavailable"
+    },
+    "telegram_staging": {
+      "status": "not_attested",
+      "reason": "real bot token/channel/domain unavailable"
+    },
+    "railway_load_and_rollback": {
+      "status": "not_attested",
+      "reason": "requires a deployed Railway staging service"
+    },
+    "overall_coverage_threshold": {
+      "status": "below_threshold",
+      "reason": "37% < 40%"
+    },
+    "critical_coverage_threshold": {
+      "status": "below_threshold",
+      "reason": "74% < 85%"
+    },
+    "production_static_analysis": {
+      "status": "not_attested",
+      "reason": "Correctness Ruff passed; full repository Ruff/Bandit/Mypy production profiles were not attested."
+    },
+    "telegram_24h_soak": {
+      "status": "not_attested",
+      "reason": "Local regression and load smoke only; no live 24-hour Telegram service test."
+    },
+    "miniapp_browser_visual": {
+      "status": "not_attested",
+      "reason": "Chromium download failed; no screenshot or Telegram WebView rendering attestation. Real source JavaScript behavior and declared palette contrast were checked separately."
+    },
+    "private_broker_bridge": {
+      "status": "not_attested",
+      "reason": "External operator-owned bridge and broker specifications require staging validation."
+    }
+  },
+  "dependency_lock": {
+    "schema_version": 2,
+    "python_target": "3.12",
+    "complete_transitive_lock": false,
+    "hashes_required": false,
+    "generated_by": "direct-pin-release-candidate",
+    "reason": "Production requires pip-tools hash locks generated and verified in a connected CPython 3.12 Linux environment.",
+    "generation_command": "python scripts/generate_dependency_locks.py",
+    "verification_command": "python scripts/verify_dependency_lock.py --require-hashes",
+    "attestation_command": "python scripts/mark_dependency_lock_complete.py",
+    "candidate_installable": true,
+    "production_attested": false
+  },
+  "security_controls": {
+    "docker_quality_dependency": true,
+    "secure_non_root_entrypoint": true,
+    "strict_production_secret_validation": true,
+    "session_key_rotation": true,
+    "backup_key_rotation": true,
+    "private_encrypted_receipt_storage": true,
+    "receipt_upload_quota_and_retention": true,
+    "postgres_advisory_migration_lock": true,
+    "postgres_connection_pool": true,
+    "redis_connection_limits": true,
+    "bounded_blocking_io": true,
+    "sse_connection_limits": true,
+    "maintenance_mutation_gate": true,
+    "csrf_and_origin_validation": true
+  },
+  "production_acceptance": {
+    "required_line_coverage_percent": 40,
+    "required_critical_path_coverage_percent": 85,
+    "requires_no_deferred_validation": true,
+    "requires_real_postgres_redis_telegram_staging": true,
+    "requires_live_gemini_generation_test": true,
+    "requires_playwright_telegram_webview_smoke": true,
+    "requires_mt5_ex5_and_demo_attestation": true,
+    "requires_complete_transitive_hash_lock": true
+  }
+}
